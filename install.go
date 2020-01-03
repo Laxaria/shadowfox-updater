@@ -12,7 +12,7 @@ import (
 )
 
 func downloadFile(file string) (string, error) {
-	resp, err := http.Get("https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/" + file)
+	resp, err := http.Get("https://raw.githubusercontent.com/laxaria/ShadowFox/master/" + file)
 	if err != nil {
 		return "", err
 	}
@@ -20,7 +20,7 @@ func downloadFile(file string) (string, error) {
 
 	data, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		return "", err
+		return "", err	
 	}
 
 	return string(data), nil
